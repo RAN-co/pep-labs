@@ -28,23 +28,17 @@ public class ReturnArrayContents {
      * @return a string representation of all values of nums, with the values separated by spaces.
      */
     public String arrayToString(int[] nums){
-        String buildStr = "";
 
-    
+        String coolStr="";
 
-        /*nums[0] = 3;
-        nums[1] = 4;
-        nums[2] = 5;
-        nums[3] = 6;
-        */
-        for(int i = 0; i <= nums.length; i++){
-           
-            buildStr = buildStr + nums[i] + ", ";
-            
+        for (int i=0; i < nums.length; i++){
+
+            coolStr = coolStr + nums[i]+ " ";
+
         }
-        return buildStr;
 
+        return coolStr;
 
-        
     }
+
 }
