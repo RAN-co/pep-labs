@@ -32,7 +32,7 @@ public class QueueExercise {
      */
     public Queue<String> createQueue(){
         
-            Queue<String> inLine = new LinkedList<>();
+            Queue<String> inLine = new Queue<>();
             return inLine;      
         
         
