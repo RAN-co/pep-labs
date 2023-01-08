@@ -28,9 +28,7 @@ public class MapExercise {
      */
     public Map<Integer, String> createMap(){
 
-        HashMap<Integer, String> myMapCollection = new HashMap<>();
-
-        return myMapCollection;
+        return new HashMap<Integer, String>();
     }
 
     /**
@@ -51,7 +49,7 @@ public class MapExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addKeyValuePair(Map<Integer,String> map, int key, String value){
-        map.put(1, "USA");
+        map.put(key, value);
     }
 
     /**
@@ -61,7 +59,7 @@ public class MapExercise {
      * @return the value associated with key in map.
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
-        return map.get(1);
+        return map.get(key);
     }
 
     /**
@@ -71,7 +69,7 @@ public class MapExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeKeyValuePair(Map<Integer, String> map, int key){
-        map.remove(1);
+        map.remove(key);
     }
 
     /**
@@ -82,6 +80,6 @@ public class MapExercise {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void overwriteValue(Map<Integer, String> map, int key, String value){
-        map.replace(1, "Brazil");
+        map.replace(key, value);
     }
 }
