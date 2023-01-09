@@ -1,8 +1,7 @@
 /**
  * TODO: switch to deque
  */
-
-import java.util.Iterator;
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -32,7 +31,8 @@ public class QueueExercise {
      */
     public Queue<String> createQueue(){
         
-            Queue<String> inLine = new Queue<>();
+            Queue<String> inLine = new ArrayDeque<>();
+
             return inLine;      
         
         
@@ -54,7 +54,7 @@ public class QueueExercise {
      * @param item a String that should be added to Queue.
      */
     public void addToEndOfQueue(Queue<String> queue, String item){
-        queue.add("First");
+        queue.add(item);
     }
 
     /**
