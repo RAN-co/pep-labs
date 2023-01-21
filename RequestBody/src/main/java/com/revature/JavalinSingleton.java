@@ -1,5 +1,9 @@
 package com.revature;
 
+import org.eclipse.jetty.server.Authentication.User;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.javalin.Javalin;
 
 /**
@@ -18,6 +22,7 @@ public class JavalinSingleton {
          */
         app.post("/problem1", ctx -> {
                 //implement logic here
+                String songName = ctx.body();
         });
 
         /**
@@ -28,6 +33,14 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem2", ctx -> {
+
+                String songName = ctx.body();
+                ObjectMapper om = new ObjectMapper();
+                User user = om.readValue(songName, User.class);
+                ctx.contentType("application/json"); 
+                user.setArtist("Beatles");
+                String jsonStringToBeReturned = om.writeValueAsString(user);
+                ctx.result(jsonStringToBeReturned);
                //implement logic here
         });
 
