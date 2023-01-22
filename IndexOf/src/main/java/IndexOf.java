@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 //
 
@@ -11,6 +12,16 @@ public class IndexOf {
      * @return the first index (position) of n in arr. if n does not exist in arr, return -1.
      */
     public int getIndex(int[] arr, int n){
-        return -1;
+        
+        for (int elementN : arr) {
+            if (elementN == n) {
+                ArrayList<Integer> arrList = new ArrayList<>();
+                for (int k : arr)
+                arrList.add(k);
+                return arrList.indexOf(n);
+            } 
+        }return -1;
+       
+        
     }
 }
