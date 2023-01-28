@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 
 public class CombineArrays {
     /**
@@ -9,6 +10,20 @@ public class CombineArrays {
      */
     public int[] combine(int[] arr1, int[] arr2){
 
-        return null;
+        int totalArrLength = arr1.length + arr2.length; //add the length of firstArray into secondArray  
+        int[] combinedArray = new int[totalArrLength];    //final array  
+        int counter = 0;  
+        for (int arrUnit : arr1) //copying elements of firstArray using for-each loop  
+        {  
+            combinedArray[counter] = arrUnit;  
+            counter++;              //increases position by 1  
+        }  
+        for (int arrUnit : arr2) //copying elements of secondtArray using for-each loop  
+        {  
+            combinedArray[counter] = arrUnit;  
+            counter++;  
+        }  
+        
+               return combinedArray;
     }
 }
