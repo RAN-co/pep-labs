@@ -11,7 +11,7 @@ import java.util.Scanner;
  * see how your code works from the user's end. You can run this method and interact with the app through your
  * IDE's terminal.
  */
-public class GameMenu {
+public class GameMenu { 
     public static void main(String[] args) {
         Scanner userInputScanner = new Scanner(System.in);
         GameService gameService = new GameService();
