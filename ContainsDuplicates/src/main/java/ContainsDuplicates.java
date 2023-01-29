@@ -9,12 +9,12 @@ public class ContainsDuplicates {
      * @return true if nums contains any duplicate values, false if it does not.
      */
     public boolean containsDuplicate(int[] nums){
-       Set<Integer> trickster = new HashSet<Integer>();
-        for(int arrUnit: nums){
-            if(trickster.contains(arrUnit) == false){
+       Set<Integer> set = new HashSet<Integer>();
+        for(int i = 0; i < nums.length; i++){
+            if(set.contains(nums[i]) == false){
                 return true;
             }
-            trickster.add(arrUnit);
+            set.add(nums[i]);
         }
         return false;
     }
