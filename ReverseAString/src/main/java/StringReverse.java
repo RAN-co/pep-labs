@@ -14,9 +14,10 @@ public class StringReverse {
      */
     public String reverse(String str){
 
-        StringBuilder encrypted = new StringBuilder(str);
-        
+        StringBuilder sb = new StringBuilder(str);
+    
+        return sb.reverse().toString();
 
-        return null;
+       
     }
 }
