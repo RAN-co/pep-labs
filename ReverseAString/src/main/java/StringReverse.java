@@ -13,6 +13,10 @@ public class StringReverse {
      * @return the reverse of str.
      */
     public String reverse(String str){
+
+        StringBuilder encrypted = new StringBuilder(str);
+        
+
         return null;
     }
 }
