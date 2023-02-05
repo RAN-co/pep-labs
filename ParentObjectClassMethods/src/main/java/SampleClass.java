@@ -57,8 +57,30 @@ public class SampleClass {
 
     //    implement a custom .equals(SampleClass other){} method here.
 
+        private int value;
+        
+        public SampleClass(int value) {
+            this.value = value;
+        }
+        
+        @Override
+        public boolean equals(Object other) {
+            if (this == other) return true;
+            if (other == null || getClass() != other.getClass()) return false;
+            SampleClass that = (SampleClass) other;
+            return value == that.value;
+        }
+
+    
 
     //    implement a custom .toString(){} method here.
 
-    
+    private int x;
+    private int y;
+    private String name;
+
+    @Override
+    public String toString() {
+        return "SampleClass [x=" + x + ", y=" + y + ", name=" + name + "]";
+    }
 }
