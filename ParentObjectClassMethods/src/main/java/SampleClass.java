@@ -57,30 +57,28 @@ public class SampleClass {
 
     //    implement a custom .equals(SampleClass other){} method here.
 
-        private int value;
-        
-        public SampleClass(int value) {
-            this.value = value;
-        }
-        
-        @Override
-        public boolean equals(Object other) {
-            if (this == other) return true;
-            if (other == null || getClass() != other.getClass()) return false;
-            SampleClass that = (SampleClass) other;
-            return value == that.value;
-        }
+//  For .equals, two objects will be considered equal if a and b are equal in both objects. .equals should take in a
+//parameter that is another SampleClass object, and access its version of a and b. Return true if the values
+//of a and b are equal in both objects, and false otherwise.
 
+@Override
+    public boolean equals(Object obj) {
+     if (obj == this) {
+        return true;
+    }
     
+    if (!(obj instanceof SampleClass)) {
+        return false;
+    }
+    
+    SampleClass other = (SampleClass) obj;
+    return this.a == other.a && this.b == other.b;
+}
 
     //    implement a custom .toString(){} method here.
 
-    private int x;
-    private int y;
-    private String name;
-
     @Override
     public String toString() {
-        return "SampleClass [x=" + x + ", y=" + y + ", name=" + name + "]";
+        return "SampleClass{" + "a=" + a + ", b=" + b +'}';
     }
 }
